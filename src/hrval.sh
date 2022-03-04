@@ -132,7 +132,7 @@ function retrieve_sources {
       fi
 
     else
-      # Retrieve existing helm chart source from cache, 
+      # Retrieve existing helm chart source from cache,
       # or create new cache directory if it does not exist yet.
 
       if [[ -z "${CHART_PATH}" ]]; then
@@ -208,6 +208,7 @@ function validate {
     helmv3 template "${HELM_RELEASE_NAME}" "${CHART_DIR}" \
       --namespace "${HELM_RELEASE_NAMESPACE}" \
       --skip-crds=true \
+      --kube-version="${KUBE_VER}" \
       -f "${TMPDIR}/${HELM_RELEASE_NAME}.values.yaml" > "${TMPDIR}/${HELM_RELEASE_NAME}.release.yaml"
   else
     if [[ "${CHART_PATH}" ]]; then
