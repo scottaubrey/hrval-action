@@ -9,5 +9,5 @@ curl -sL https://github.com/mikefarah/yq/releases/download/3.4.1/yq_linux_amd64 
 curl -sSL https://get.helm.sh/helm-v2.17.0-linux-amd64.tar.gz | tar xz && mv linux-amd64/helm /bin/helm && rm -rf linux-amd64
 helm init --stable-repo-url https://charts.helm.sh/stable  --client-only --kubeconfig="${HOME}/.kube/kubeconfig"
 
-curl -sSL https://get.helm.sh/helm-v3.1.1-linux-amd64.tar.gz | tar xz && mv linux-amd64/helm /bin/helmv3 && rm -rf linux-amd64
+curl -sSL https://get.helm.sh/helm-v3.8.0-linux-amd64.tar.gz | tar xz && mv linux-amd64/helm /bin/helmv3 && rm -rf linux-amd64
 helmv3 version
